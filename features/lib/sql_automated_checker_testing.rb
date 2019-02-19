@@ -1,5 +1,5 @@
 require_relative 'pages/index'
-require_relative 'pages/question_one'
+require_relative 'pages/question'
 require_relative 'pages/score'
 require_relative 'pages/student_instruction'
 require_relative 'pages/student_login'
@@ -10,8 +10,8 @@ class SqlAutomatedCheckerTesting
     Index.new
   end
 
-  def question_one
-    QuestionOne.new
+  def question
+    Question.new
   end
 
   def score

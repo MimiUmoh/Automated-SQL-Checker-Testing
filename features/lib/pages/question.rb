@@ -1,6 +1,6 @@
 require 'capybara/dsl'
 
-class QuestionOne
+class Question
   include Capybara::DSL
   
 end
