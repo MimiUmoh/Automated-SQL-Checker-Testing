@@ -54,3 +54,14 @@ Feature: Sql Automated Checker
     And I am on the score page
     When I click on the log out button
     Then I should be directed to the index page
+
+  Scenario: Check details on score page with current student
+    Given I am logged in
+    And I enter valid credentials
+    When I am on the score page
+    Then I should see the corresponding details for the current student
+
+  Scenario: Student has completed test
+    Given I have completed the test
+    When I login
+    Then I should be directed to the score page
