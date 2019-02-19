@@ -24,3 +24,9 @@ Feature: Sql Automated Checker
     Then I should be able to see saved answers in each field
 
     Examples:
+
+  Scenario: Info page button
+    Given I am logged in
+    And I am on the questions page
+    When I click on the info button
+    Then I should be directed to the info page
