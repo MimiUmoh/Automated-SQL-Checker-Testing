@@ -30,3 +30,9 @@ Feature: Sql Automated Checker
     And I am on the questions page
     When I click on the info button
     Then I should be directed to the info page
+
+  Scenario: Info Page back button
+    Given I am logged in
+    And I am on the info page
+    When I click the back button on the info page
+    Then I should be directed back to the questions page
