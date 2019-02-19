@@ -48,3 +48,9 @@ Feature: Sql Automated Checker
     And I am on the questions page
     When I click the submit button
     Then I should be directed to the score page
+
+  Scenario: Score page log out button
+    Given I am logged in
+    And I am on the score page
+    When I click on the log out button
+    Then I should be directed to the index page
