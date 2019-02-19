@@ -5,3 +5,8 @@ Feature: Sql Automated Checker
     Given I am on the index page
     When I click on the student button
     Then I should be navigated to the student login page
+
+  Scenario: Login credentials
+    Given I am on the login page
+    When I enter valid credentials
+    Then I should be navigated to the questions page
