@@ -8,7 +8,7 @@ Ruby
 
 ### How to download
 1. Copy/Clone the URL on GitHub
-2. Open selected text editor
+2. Open selected text edit
 3. In selected text editor, open up in-built terminal and type 'git clone' followed by the URL copied from GitHub 
 
 ### How to run tests
