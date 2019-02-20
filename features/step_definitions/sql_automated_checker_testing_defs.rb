@@ -1,5 +1,6 @@
 Given("I am on the index page") do
   @sql_automated_checker.index.visit_index
+  expect(@sql_automated_checker.index.click_admin)
 end
 
 When("I click on the student button") do
@@ -82,7 +83,7 @@ When("I click on the log out button") do
   pending # Write code here that turns the phrase above into concrete actions
 end
 
-Given("I enter valid credentials") do
+Given("I enter the valid credentials") do
   pending # Write code here that turns the phrase above into concrete actions
 end
 
