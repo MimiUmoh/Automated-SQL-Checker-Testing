@@ -31,7 +31,7 @@ Feature: Sql Automated Checker
     When I click on the info button
     Then I should be directed to the info page
 
-@test
+  @info_page_back_button
   Scenario: Info Page back button
     Given I am logged in
     And I am on the info page

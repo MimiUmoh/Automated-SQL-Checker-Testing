@@ -5,3 +5,7 @@ Before do
   @password = ENV['PASSWORD']
   @sql_automated_checker.index.visit_index
 end
+
+Before ('@info_page_back_button') do
+  @sql_automated_checker.question.click_info_button
+end 
