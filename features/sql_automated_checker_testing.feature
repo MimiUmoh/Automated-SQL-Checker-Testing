@@ -16,14 +16,13 @@ Feature: Sql Automated Checker
     When I press the back button on the login page
     Then I should be directed to the index page
 
-  Scenario Outline: Save button on questions page
+  @test
+  Scenario: Save button on questions page
     Given I am logged in
     And I am on the questions page
     When I save each answer
     And I re-log
     Then I should be able to see saved answers in each field
-
-    Examples:
 
   Scenario: Info page button
     Given I am logged in

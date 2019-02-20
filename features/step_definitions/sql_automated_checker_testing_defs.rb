@@ -38,10 +38,10 @@ Given("I am logged in") do
   @sql_automated_checker.index.click_student
   @sql_automated_checker.student_login.fill_in_email(@email)
   @sql_automated_checker.student_login.fill_in_password(@password)
+  @sql_automated_checker.student_login.click_student_login
 end
 
 Given("I am on the questions page") do
-  @sql_automated_checker.student_login.click_student_login
   expect(@sql_automated_checker.question.find_question_header).to eq(@sql_automated_checker.question.question_header)
 end
 
@@ -105,5 +105,17 @@ Given("I have completed the test") do
 end
 
 When("I login") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+When("I save each answer") do
+  fill_in_question_one()
+end
+
+When("I re-log") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then("I should be able to see saved answers in each field") do
   pending # Write code here that turns the phrase above into concrete actions
 end
