@@ -82,7 +82,7 @@ When("I click on the log out button") do
   pending # Write code here that turns the phrase above into concrete actions
 end
 
-Given("I enter valid credentials") do
+Given("I enter the valid credentials") do
   pending # Write code here that turns the phrase above into concrete actions
 end
 
