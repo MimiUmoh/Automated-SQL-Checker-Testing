@@ -6,6 +6,11 @@ class Index
   ADMIN_NAME_BTN = 'Admin'
   STUDENT_NAME_BTN = 'Student'
   SQL_ASSESSMENT_H1 = 'h1'
+  INDEX_URL = 'localhost:3000'
+
+  def visit_index
+    visit(INDEX_URL)
+  end
 
   def click_admin
     click_button(ADMIN_NAME_BTN)
