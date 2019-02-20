@@ -14,4 +14,5 @@ class Score
   def find_score_page
     find(:css, SCORE_PAGE_H3).text
   end
+
 end
