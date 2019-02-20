@@ -17,8 +17,8 @@ Given("I am on the login page") do
 end
 
 When("I enter valid credentials") do
-  @sql_automated_checker.student_login.fill_in_email('admin@spartaglobal.com')
-  @sql_automated_checker.student_login.fill_in_password('Password1')
+  @sql_automated_checker.student_login.fill_in_email(@email)
+  @sql_automated_checker.student_login.fill_in_password(@password)
   @sql_automated_checker.student_login.click_student_login
 end
 
@@ -27,11 +27,11 @@ Then("I should be navigated to the questions page") do
 end
 
 When("I press the back button on the login page") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @sql_automated_checker.student_login.click_back_button
 end
 
 Then("I should be directed to the index page") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @sql_automated_checker.index.find_header
 end
 
 Given("I am logged in") do
