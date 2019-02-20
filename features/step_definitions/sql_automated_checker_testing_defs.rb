@@ -47,7 +47,7 @@ Then("I should be directed to the info page") do
 end
 
 Given("I am on the info page") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @sql.automated_checker_testing.student_instruction.find_student_instruction_header
 end
 
 When("I click the back button on the info page") do

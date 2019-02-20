@@ -14,15 +14,15 @@ class StudentInstruction
   end
 
   def find_admin_info
-    find(:css, ADMIN_INFO_H2).text
+    find(ADMIN_INFO_H2).text
   end
 
   def find_student_info
-    find(:css, STUDENT_INFO_H2).text
+    find(STUDENT_INFO_H2).text
   end
 
   def find_how_to_save
-    find(:css, HOW_TO_SAVE_H2).text
+    find(HOW_TO_SAVE_H2).text
   end
 
   def click_student
