@@ -50,13 +50,12 @@ When("I click on the info button") do
 end
 
 Then("I should be directed to the info page") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(@sql_automated_checker.question.find_question_one).to eq('Write a query that lists all Customers in either Paris or London. Include Customer ID, Company Name and all address fields.')
 end
 
 Given("I am on the info page") do
   @sql_automated_checker.question.click_info_button
   expect(@sql_automated_checker.student_instruction.find_student_instruction_header).to eq('HOW TO USE')
-  # expect(@sql_automated_checker.student_instruction.find_admin_info).to eq('Admin Info')
 end
 
 When("I click the back button on the info page") do
@@ -64,7 +63,7 @@ When("I click the back button on the info page") do
 end
 
 Then("I should be directed back to the questions page") do
-  pending # Write code here that turns the phrase above into concrete actions
+  
 end
 
 When("I click the log out button") do
