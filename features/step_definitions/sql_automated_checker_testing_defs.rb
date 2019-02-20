@@ -1,9 +1,9 @@
 Given("I am on the index page") do
-  @SqlAutomatedCheckerTesting.index.find_header
+  @sql_automated_checker.index.find_header
 end
 
 When("I click on the student button") do
-  @SqlAutomatedCheckerTesting.index.click_student
+  @sql_automated_checker.index.click_student
 end
 
 Then("I should be navigated to the student login page") do
