@@ -1,9 +1,9 @@
 Given("I am on the index page") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @SqlAutomatedCheckerTesting.index.find_header
 end
 
 When("I click on the student button") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @SqlAutomatedCheckerTesting.index.click_student
 end
 
 Then("I should be navigated to the student login page") do
