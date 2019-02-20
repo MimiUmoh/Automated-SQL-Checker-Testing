@@ -8,6 +8,7 @@ class Question
   QUESTION_PAGE_H1 = 'h1'
   QUESTION_PAGE_INFO_BTN = 'Info'
   LOGOUT_PAGE_BTN = 'Logout'
+  QUESTION_PAGE_SUBMIT_BTN = 'Submit'
 
   def initialize
     @question_header = 'Questions'
@@ -23,6 +24,10 @@ class Question
 
   def click_logout_button
     click_button(LOGOUT_PAGE_BTN)
+  end
+
+  def click_question_page_submit_button
+    click_link(QUESTION_PAGE_SUBMIT_BTN)
   end
 
 end
