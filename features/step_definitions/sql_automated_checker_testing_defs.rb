@@ -1,13 +1,14 @@
 Given("I am on the index page") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @sql_automated_checker.index.visit_index
+  expect(@sql_automated_checker.index.find_header).to eq('SQL Assesment')
 end
 
 When("I click on the student button") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @sql_automated_checker.index.click_student
 end
 
 Then("I should be navigated to the student login page") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(@sql_automated_checker.student_login.find_header).to eq('Student Login')
 end
 
 Given("I am on the login page") do

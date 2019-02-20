@@ -23,4 +23,5 @@ class StudentLogin
   def click_student_login
     click_button(STUDENT_LOGIN_BTN)
   end
+  
 end
