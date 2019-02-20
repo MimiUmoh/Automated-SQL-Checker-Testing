@@ -35,8 +35,9 @@ Then("I should be directed to the index page") do
 end
 
 Given("I am logged in") do
-  @sql_automated_checker.student_login.fill_in_email('admin@spartaglobal.com')
-  @sql_automated_checker.student_login.fill_in_password('Password1')
+  @sql_automated_checker.index.click_student
+  @sql_automated_checker.student_login.fill_in_email(@email)
+  @sql_automated_checker.student_login.fill_in_password(@password)
   @sql_automated_checker.student_login.click_student_login
 end
 
@@ -53,11 +54,13 @@ Then("I should be directed to the info page") do
 end
 
 Given("I am on the info page") do
-  @sql.automated_checker_testing.student_instruction.find_student_instruction_header
+  @sql_automated_checker.question.click_info_button
+  expect(@sql_automated_checker.student_instruction.find_student_instruction_header).to eq('HOW TO USE')
+  # expect(@sql_automated_checker.student_instruction.find_admin_info).to eq('Admin Info')
 end
 
 When("I click the back button on the info page") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @sql_automated_checker.student_instruction.click_back_button
 end
 
 Then("I should be directed back to the questions page") do
