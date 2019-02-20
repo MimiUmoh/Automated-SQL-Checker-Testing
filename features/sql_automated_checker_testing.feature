@@ -48,7 +48,7 @@ Feature: Sql Automated Checker
     And I am on the questions page
     When I click the submit button
     Then I should be directed to the score page
-  @score_logout_button
+
   Scenario: Score page log out button
     Given I am logged in
     And I am on the score page
