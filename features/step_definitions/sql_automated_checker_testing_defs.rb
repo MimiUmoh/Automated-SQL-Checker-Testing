@@ -27,11 +27,11 @@ Then("I should be navigated to the questions page") do
 end
 
 When("I press the back button on the login page") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @sql_automated_checker.student_login.click_back_button
 end
 
 Then("I should be directed to the index page") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @sql_automated_checker.index.find_header
 end
 
 Given("I am logged in") do

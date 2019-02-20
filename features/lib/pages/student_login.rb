@@ -7,6 +7,7 @@ class StudentLogin
   PASSWORD_INPUT_FIELD = 'password'
   STUDENT_LOGIN_H1 = 'h1'
   STUDENT_LOGIN_BTN = 'Submit'
+  STUDENT_LOGIN_BACK_BTN = 'Back'
 
   def fill_in_email(email)
     fill_in(EMAIL_INPUT_FIELD, with: email)
@@ -22,6 +23,10 @@ class StudentLogin
 
   def click_student_login
     click_button(STUDENT_LOGIN_BTN)
+  end
+
+  def click_back_button
+    click_button(STUDENT_LOGIN_BACK_BTN)
   end
   
 end
