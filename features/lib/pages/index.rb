@@ -3,10 +3,16 @@ require 'capybara/dsl'
 class Index
   include Capybara::DSL
 
+  attr_accessor :index_header
+
   ADMIN_NAME_BTN = 'Admin'
   STUDENT_NAME_BTN = 'Student'
   SQL_ASSESSMENT_H1 = 'h1'
   INDEX_URL = 'localhost:3000'
+
+  def initialize
+    @index_header = 'SQL Assesment'
+  end
 
   def visit_index
     visit(INDEX_URL)
