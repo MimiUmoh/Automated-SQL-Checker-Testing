@@ -35,19 +35,22 @@ Then("I should be directed to the index page") do
 end
 
 Given("I am logged in") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @sql_automated_checker.index.click_student
+  @sql_automated_checker.student_login.fill_in_email(@email)
+  @sql_automated_checker.student_login.fill_in_password(@password)
+  @sql_automated_checker.student_login.click_student_login
 end
 
 Given("I am on the questions page") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(@sql_automated_checker.question.find_question_header).to eq(@sql_automated_checker.question.question_header)
 end
 
 When("I click on the info button") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @sql_automated_checker.question.click_info_button
 end
 
 Then("I should be directed to the info page") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(@sql_automated_checker.student_instruction.find_info_page).to eq(@sql_automated_checker.student_instruction.find_info_page)
 end
 
 Given("I am on the info page") do
