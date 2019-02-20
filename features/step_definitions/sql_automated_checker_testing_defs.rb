@@ -12,15 +12,18 @@ Then("I should be navigated to the student login page") do
 end
 
 Given("I am on the login page") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @sql_automated_checker.index.click_student
+  expect(@sql_automated_checker.student_login.find_header).to eq('Student Login')
 end
 
 When("I enter valid credentials") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @sql_automated_checker.student_login.fill_in_email('admin@spartaglobal.com')
+  @sql_automated_checker.student_login.fill_in_password('Password1')
+  @sql_automated_checker.student_login.click_student_login
 end
 
 Then("I should be navigated to the questions page") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(@sql_automated_checker.question.find_question_one).to eq('Write a query that lists all Customers in either Paris or London. Include Customer ID, Company Name and all address fields.')
 end
 
 When("I press the back button on the login page") do
