@@ -11,11 +11,13 @@ Then("I should be navigated to the student login page") do
 end
 
 Given("I am on the login page") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @sql_automated_checker.index.click_student
+  expect(@sql_automated_checker.student_login.find_header).to eq('Student Login')
 end
 
 When("I enter valid credentials") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @sql_automated_checker.student_login.fill_in_email('admin@spartaglobal.com')
+  @sql_automated_checker.student_login.fill_in_password('Password1')
 end
 
 Then("I should be navigated to the questions page") do
