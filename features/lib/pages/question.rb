@@ -7,6 +7,7 @@ class Question
 
   QUESTION_PAGE_H1 = 'h1'
   QUESTION_PAGE_INFO_BTN = 'Info'
+  QUESTION_PAGE_SUBMIT_BTN = 'Submit'
 
   def initialize
     @question_header = 'Questions'
@@ -18,6 +19,10 @@ class Question
 
   def click_info_button
     click_link(QUESTION_PAGE_INFO_BTN)
+  end
+
+  def click_question_page_submit_button
+    click_link(QUESTION_PAGE_SUBMIT_BTN)
   end
 
 end
