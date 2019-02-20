@@ -34,7 +34,9 @@ Then("I should be directed to the index page") do
 end
 
 Given("I am logged in") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @sql_automated_checker.student_login.fill_in_email('admin@spartaglobal.com')
+  @sql_automated_checker.student_login.fill_in_password('Password1')
+  @sql_automated_checker.student_login.click_student_login
 end
 
 Given("I am on the questions page") do
