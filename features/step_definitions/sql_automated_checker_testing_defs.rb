@@ -17,8 +17,8 @@ Given("I am on the login page") do
 end
 
 When("I enter valid credentials") do
-  @sql_automated_checker.student_login.fill_in_email('admin@spartaglobal.com')
-  @sql_automated_checker.student_login.fill_in_password('Password1')
+  @sql_automated_checker.student_login.fill_in_email(@email)
+  @sql_automated_checker.student_login.fill_in_password(@password)
   @sql_automated_checker.student_login.click_student_login
 end
 
