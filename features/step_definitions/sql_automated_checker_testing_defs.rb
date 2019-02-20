@@ -1,6 +1,6 @@
 Given("I am on the index page") do
   @sql_automated_checker.index.visit_index
-  expect(@sql_automated_checker.index.click_admin)
+  expect(@sql_automated_checker.index.find_header).to eq('SQL Assesment')
 end
 
 When("I click on the student button") do
