@@ -5,7 +5,7 @@ class Index
 
   ADMIN_NAME_BTN = 'Admin'
   STUDENT_NAME_BTN = 'Student'
-  SQL_ASSESSMENT_HEADER = 'h1'
+  SQL_ASSESSMENT_H1 = 'h1'
 
   def click_admin
     click_button(ADMIN_NAME_BTN)
@@ -16,7 +16,7 @@ class Index
   end
 
   def find_header
-    find(:css, SQL_ASSESSMENT_HEADER).text
+    find(:css, SQL_ASSESSMENT_H1).text
   end
   
 end
