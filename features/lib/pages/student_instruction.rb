@@ -3,11 +3,17 @@ require 'capybara/dsl'
 class StudentInstruction
   include Capybara::DSL
   
+  attr_accessor :info_header_one_text
+
   HOW_TO_USE = 'h1'
   ADMIN_INFO = 'Admin Info'
   STUDENT_INFO = 'Student Info'
   HOW_TO_SAVE = 'How to Save'
   BACK_BTN = 'Back'
+
+  def initialize
+    @info_header_one_text = 'HOW TO USE'
+  end
 
   def find_student_instruction_header
     find(:css, HOW_TO_USE).text
