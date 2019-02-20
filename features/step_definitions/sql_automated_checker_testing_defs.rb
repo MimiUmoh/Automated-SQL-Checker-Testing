@@ -54,6 +54,7 @@ Then("I should be directed to the info page") do
 end
 
 Given("I am on the info page") do
+  @sql_automated_checker.question.click_info_button
   expect(@sql_automated_checker.student_instruction.find_student_instruction_header).to eq @sql_automated_checker.student_instruction.info_header_one_text
 end
 
