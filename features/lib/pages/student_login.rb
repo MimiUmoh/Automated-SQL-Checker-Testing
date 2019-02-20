@@ -16,7 +16,7 @@ class StudentLogin
   end
 
   def find_header
-    find(:css, STUDENT_LOGIN_HEADER)
+    find(:css, STUDENT_LOGIN_HEADER).text
   end
 
 end

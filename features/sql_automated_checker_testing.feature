@@ -1,6 +1,6 @@
 Feature: Sql Automated Checker
   As a student I want to be able to use the Sql Automated Checker
-
+  @student_button
   Scenario: Student button on index page
     Given I am on the index page
     When I click on the student button
