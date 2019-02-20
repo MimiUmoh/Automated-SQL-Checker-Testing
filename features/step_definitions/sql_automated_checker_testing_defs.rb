@@ -22,7 +22,7 @@ When("I enter valid credentials") do
 end
 
 Then("I should be navigated to the questions page") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(@sql_automated_checker.question.find_question_one).to eq('Write a query that lists all Customers in either Paris or London. Include Customer ID, Company Name and all address fields.')
 end
 
 When("I press the back button on the login page") do
