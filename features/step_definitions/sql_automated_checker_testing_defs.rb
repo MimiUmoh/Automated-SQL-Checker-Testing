@@ -23,7 +23,7 @@ When("I enter valid credentials") do
 end
 
 Then("I should be navigated to the questions page") do
-  expect(@sql_automated_checker.question.find_question_one).to eq('Write a query that lists all Customers in either Paris or London. Include Customer ID, Company Name and all address fields.')
+  expect(@sql_automated_checker.question.find_question_header).to eq(@sql_automated_checker.question.question_header)
 end
 
 When("I press the back button on the login page") do

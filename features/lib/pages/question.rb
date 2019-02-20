@@ -3,10 +3,16 @@ require 'capybara/dsl'
 class Question
   include Capybara::DSL
   
-  # Xpath to be changed when questions page has been fixed
-  QUESTION_ONE_FIELD_INPUT_ID = '/html/body/div/div/div[2]/div[2]/div[1]/div[2]/form/div/label[2]'
+  attr_accessor :question_header
 
-  def find_question_one
-    find(:xpath, QUESTION_ONE_FIELD_INPUT_ID).text
+  QUESTION_PAGE_H1 = 'h1'
+
+  def initialize
+    @question_header = 'Questions'
   end
+
+  def find_question_header
+    find(:css, QUESTION_PAGE_H1).text
+  end
+
 end
