@@ -9,6 +9,7 @@ class Question
   QUESTION_ONE_FIELD_INPUT_ID = '/html/body/div/div/div[2]/div[2]/div[1]/div[2]/form/div/label[2]'
   INFO_BTN = 'Info'
   QUESTION_PAGE_H1 = 'h1'
+  QUESTION_PAGE_INFO_BTN = 'Info'
 
   def initialize
     @question_one_text = 'Write a query that lists all Customers in either Paris or London. Include Customer ID, Company Name and all address fields.'
@@ -23,4 +24,7 @@ class Question
     click_button(INFO_BTN)
   end
 
+  def click_info_button
+    click_link(QUESTION_PAGE_INFO_BTN)
+  end
 end

@@ -23,5 +23,4 @@ class Index
   def find_header
     find(:css, SQL_ASSESSMENT_H1).text
   end
-
 end

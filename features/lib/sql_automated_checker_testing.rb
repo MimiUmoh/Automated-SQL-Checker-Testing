@@ -25,5 +25,4 @@ class SqlAutomatedCheckerTesting
   def student_login
     StudentLogin.new
   end
-  
 end

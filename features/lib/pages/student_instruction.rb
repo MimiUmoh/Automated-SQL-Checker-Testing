@@ -10,6 +10,7 @@ class StudentInstruction
   STUDENT_INFO = 'Student Info'
   HOW_TO_SAVE = 'How to Save'
   BACK_BTN = 'Back'
+  INFO_PAGE_H1 = 'h1'
 
   def initialize
     @info_header_one_text = 'HOW TO USE'
@@ -33,5 +34,9 @@ class StudentInstruction
 
   def click_back_button
     click_button(BACK_BTN)
+  end
+
+  def find_info_page
+    find(:css, INFO_PAGE_H1).text
   end
 end

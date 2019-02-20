@@ -28,5 +28,4 @@ class StudentLogin
   def click_back_button
     click_button(STUDENT_LOGIN_BACK_BTN)
   end
-  
 end
