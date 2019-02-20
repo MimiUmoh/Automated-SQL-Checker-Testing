@@ -11,7 +11,6 @@ Feature: Sql Automated Checker
     When I enter valid credentials
     Then I should be navigated to the questions page
 
-  @test
   Scenario: Back button on login page
     Given I am on the login page
     When I press the back button on the login page
