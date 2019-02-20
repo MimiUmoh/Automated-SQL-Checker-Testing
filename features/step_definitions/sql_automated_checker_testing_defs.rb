@@ -85,7 +85,8 @@ When("I click on the log out button") do
 end
 
 Given("I enter valid credentials") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @sql_automated_checker.student_login.fill_in_email('admin@spartaglobal.com')
+  @sql_automated_checker.student_login.fill_in_password('Password1')
 end
 
 When("I am on the score page") do

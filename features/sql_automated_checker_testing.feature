@@ -6,6 +6,7 @@ Feature: Sql Automated Checker
     When I click on the student button
     Then I should be navigated to the student login page
 
+  @test
   Scenario: Login credentials
     Given I am on the login page
     When I enter valid credentials
@@ -57,7 +58,7 @@ Feature: Sql Automated Checker
 
   Scenario: Check details on score page with current student
     Given I am logged in
-    And I enter valid credentials
+    And I enter the valid credentials
     When I am on the score page
     Then I should see the corresponding details for the current student
 

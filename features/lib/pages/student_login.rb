@@ -6,6 +6,7 @@ class StudentLogin
   EMAIL_INPUT_FIELD = 'email'
   PASSWORD_INPUT_FIELD = 'password'
   STUDENT_LOGIN_H1 = 'h1'
+  STUDENT_LOGIN_BTN = 'Submit'
 
   def fill_in_email(email)
     fill_in(EMAIL_INPUT_FIELD, with: email)
@@ -16,7 +17,10 @@ class StudentLogin
   end
 
   def find_header
-    find(:css, STUDENT_LOGIN_H1)
+    find(:css, STUDENT_LOGIN_H1).text
   end
 
+  def click_student_login
+    click_button(STUDENT_LOGIN_BTN)
+  end
 end
