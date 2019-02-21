@@ -106,7 +106,7 @@ When("I login") do
 end
 
 When("I save each answer") do
-  fill_in_question_one()
+  @sql_automated_checker.question.fill_in_question_one(@sql_automated_checker.question.test_answer)
 end
 
 When("I re-log") do
