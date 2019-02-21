@@ -77,7 +77,6 @@ Feature: Sql Automated Checker
     Then I should see Pass on my score page
     And thirty marks
 
-  @test
   Scenario: Student fails the test
     Given I am logged in
     And I am on the questions page
