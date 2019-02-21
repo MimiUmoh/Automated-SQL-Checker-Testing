@@ -3,6 +3,7 @@ Before do
   @sql_automated_checker = SqlAutomatedCheckerTesting.new
   @email = ENV['EMAIL']
   @password = ENV['PASSWORD']
+  @name = ENV['NAME']
   @sql_automated_checker.index.visit_index
 end
 

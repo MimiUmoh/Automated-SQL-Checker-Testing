@@ -7,6 +7,7 @@ class Score
 
   SCORE_PAGE_H3 = '.result_grey_box h3'
   SCORE_LOGOUT_BTN = 'Logout'
+  STUDENT_NAME_ID = 'student-name'
 
   def initialize
     @score_header = 'Score:'
@@ -18,6 +19,10 @@ class Score
 
   def click_logout_button
     click_button(SCORE_LOGOUT_BTN)
+  end
+
+  def find_student_name
+    find(:id, STUDENT_NAME_ID).text
   end
 
 end

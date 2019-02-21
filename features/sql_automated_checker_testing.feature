@@ -58,10 +58,9 @@ Feature: Sql Automated Checker
     When I click on the log out button
     Then I should be directed to the index page
 
-  @log_out
+  @test
   Scenario: Check details on score page with current student
     Given I am logged in
-    And I enter the valid credentials
     When I am on the score page
     Then I should see the corresponding details for the current student
 
