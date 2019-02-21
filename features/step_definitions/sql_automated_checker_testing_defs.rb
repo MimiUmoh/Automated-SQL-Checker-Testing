@@ -66,11 +66,11 @@ Then("I should be directed back to the questions page") do
 end
 
 When("I click the log out button") do
-  @sql_automated_checker.question.click_logout_button
+  @sql_automated_checker.question.click_log_out_button
 end
 
 Then("I should be directed to the login page") do
-  expect(@sql_automated_checker.index.find_header).to eq(@sql_automated_checker.index.index_header)
+  expect(@sql_automated_checker.index.find_header).to eq(@sql_automated_checker.student_login.find_header)
 end
 
 When("I click the submit button") do
@@ -85,8 +85,9 @@ Given("I am on the score page") do
   @sql_automated_checker.question.click_question_page_submit_button
   expect(@sql_automated_checker.score.find_score_page).to eq(@sql_automated_checker.score.score_header)
 end
+
 When("I click on the log out button") do
-  @sql_automated_checker.score.click_logout_button
+  @sql_automated_checker.question.click_log_out_button
 end
 
 Given("I enter the valid credentials") do
@@ -130,7 +131,6 @@ When("I re-log") do
   @sql_automated_checker.student_login.fill_in_email(@email)
   @sql_automated_checker.student_login.fill_in_password(@password)
   @sql_automated_checker.student_login.click_student_login
-  sleep 3
 end
 
 Then("I should be able to see saved answers in each field") do

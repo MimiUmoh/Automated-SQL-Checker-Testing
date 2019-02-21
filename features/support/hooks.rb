@@ -6,6 +6,15 @@ Before do
   @sql_automated_checker.index.visit_index
 end
 
-After('@save_button_question_page') do
+After('@clear_submitted_question_database') do
+  @sql_automated_checker.db_connection.clear_data(3)
+end
+
+After('@log_out') do
+  @sql_automated_checker.question.click_log_out_button
+end
+
+After('@log_out_and_clear_submitted_question_database') do
+  @sql_automated_checker.question.click_log_out_button
   @sql_automated_checker.db_connection.clear_data(3)
 end

@@ -24,12 +24,8 @@ class Question
     click_link(QUESTION_PAGE_INFO_BTN)
   end
 
-  def click_logout_button
-    click_button(LOGOUT_PAGE_BTN)
-  end
-
   def click_question_page_submit_button
-    click_link(QUESTION_PAGE_SUBMIT_BTN)
+    click_button(QUESTION_PAGE_SUBMIT_BTN)
   end
 
   def fill_in_question(number, test_answer)
@@ -41,7 +37,7 @@ class Question
   end
 
   def click_log_out_button
-    click_link(LOG_OUT_BTN_ID)
+    click_button(LOG_OUT_BTN_ID)
   end
 
   def find_question_field_text(number)

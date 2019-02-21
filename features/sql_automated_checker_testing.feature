@@ -6,6 +6,7 @@ Feature: Sql Automated Checker
     When I click on the student button
     Then I should be navigated to the student login page
 
+  @log_out
   Scenario: Login credentials
     Given I am on the login page
     When I enter valid credentials
@@ -16,7 +17,7 @@ Feature: Sql Automated Checker
     When I press the back button on the login page
     Then I should be directed to the index page
 
-  @save_button_question_page
+  @clear_submitted_question_database
   Scenario: Save button on questions page
     Given I am logged in
     And I am on the questions page
@@ -24,12 +25,14 @@ Feature: Sql Automated Checker
     And I re-log
     Then I should be able to see saved answers in each field
 
+  @log_out
   Scenario: Info page button
     Given I am logged in
     And I am on the questions page
     When I click on the info button
     Then I should be directed to the info page
 
+  @log_out
   Scenario: Info Page back button
     Given I am logged in
     And I am on the info page
@@ -42,6 +45,7 @@ Feature: Sql Automated Checker
     When I click the log out button
     Then I should be directed to the login page
 
+  @clear_submitted_question_database
   Scenario: Submit button on questions page
     Given I am logged in
     And I am on the questions page
@@ -54,12 +58,14 @@ Feature: Sql Automated Checker
     When I click on the log out button
     Then I should be directed to the index page
 
+  @log_out
   Scenario: Check details on score page with current student
     Given I am logged in
     And I enter the valid credentials
     When I am on the score page
     Then I should see the corresponding details for the current student
 
+  # @log_out
   Scenario: Student has completed test
     Given I have completed the test
     When I login
