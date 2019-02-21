@@ -71,7 +71,6 @@ Feature: Sql Automated Checker
     When I login
     Then I should be directed to the score page
 
-  @test
   Scenario: Student passed the test
     Given I am logged in
     And I am on the questions page

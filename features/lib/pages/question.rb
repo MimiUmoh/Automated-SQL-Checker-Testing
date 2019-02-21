@@ -43,5 +43,5 @@ class Question
   def find_question_field_text(number)
     find(:id, "question-#{number}-text").text
   end
-  
+
 end
