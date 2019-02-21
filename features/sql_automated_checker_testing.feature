@@ -74,6 +74,6 @@ Feature: Sql Automated Checker
   Scenario: Student passed the test
     Given I am logged in
     And I am on the questions page
-    When I answer the first six questions right
+    When I answer six questions right
     Then I should see Pass on my score page
     And thirty marks

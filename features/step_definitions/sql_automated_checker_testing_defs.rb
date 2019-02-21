@@ -154,7 +154,7 @@ Then("I should be able to see saved answers in each field") do
   
 end
 
-When("I answer the first six questions right") do
+When("I answer six questions right") do
   @sql_automated_checker.question.fill_in_question(1, 'SELECT * FROM Customers
     WHERE City = "London" OR City = "Paris"')
   @sql_automated_checker.question.click_save_question(1)
