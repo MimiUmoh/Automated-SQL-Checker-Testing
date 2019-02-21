@@ -16,7 +16,7 @@ Feature: Sql Automated Checker
     When I press the back button on the login page
     Then I should be directed to the index page
 
-  @test
+  @save_button_question_page
   Scenario: Save button on questions page
     Given I am logged in
     And I am on the questions page

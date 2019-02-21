@@ -7,5 +7,5 @@ Before do
 end
 
 After('@save_button_question_page') do
-
+  @sql_automated_checker.db_connection.clear_data(3)
 end
