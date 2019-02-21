@@ -25,6 +25,7 @@ class Question
   QUESTION_SIX_SAVE_BTN_ID = 'question-6-button'
   QUESTION_SEVEN_SAVE_BTN_ID = 'question-7-button'
   QUESTION_EIGHT_SAVE_BTN_ID = 'question-8-button'
+  LOG_OUT_BTN_ID = 'Log Out'
 
   def initialize
     @question_header = 'Questions'
@@ -109,6 +110,42 @@ class Question
 
   def click_save_question_eight
     click_button(QUESTION_EIGHT_SAVE_BTN_ID)
+  end
+
+  def click_log_out_button
+    click_link(LOG_OUT_BTN_ID)
+  end
+
+  def find_question_one_field_text
+    find(:id, QUESTION_ONE_FIELD_ID).text
+  end
+
+  def find_question_two_field_text
+    find(:id, QUESTION_TWO_FIELD_ID).text
+  end
+
+  def find_question_three_field_text
+    find(:id, QUESTION_THREE_FIELD_ID).text
+  end
+
+  def find_question_four_field_text
+    find(:id, QUESTION_FOUR_FIELD_ID).text
+  end
+
+  def find_question_five_field_text
+    find(:id, QUESTION_FIVE_FIELD_ID).text
+  end
+
+  def find_question_six_field_text
+    find(:id, QUESTION_SIX_FIELD_ID).text
+  end
+
+  def find_question_seven_field_text
+    find(:id, QUESTION_SEVEN_FIELD_ID).text
+  end
+
+  def find_question_eight_field_text
+    find(:id, QUESTION_EIGHT_FIELD_ID).text
   end
   
 end
