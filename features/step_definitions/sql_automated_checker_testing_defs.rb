@@ -100,11 +100,19 @@ Then("I should see the corresponding details for the current student") do
 end
 
 Given("I have completed the test") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @sql_automated_checker.index.click_student
+  @sql_automated_checker.student_login.fill_in_email(@email)
+  @sql_automated_checker.student_login.fill_in_password(@password)
+  @sql_automated_checker.student_login.click_student_login
+  @sql_automated_checker.question.click_question_page_submit_button
+  @sql_automated_checker.question.click_log_out_button
 end
 
 When("I login") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @sql_automated_checker.student_login.fill_in_email(@email)
+  @sql_automated_checker.student_login.fill_in_password(@password)
+  @sql_automated_checker.student_login.click_student_login
+  @sql_automated_checker.question.click_question_page_submit_button
 end
 
 When("I save each answer") do
