@@ -106,22 +106,23 @@ When("I login") do
 end
 
 When("I save each answer") do
-  @sql_automated_checker.question.fill_in_question_one(@sql_automated_checker.question.test_answer)
-  @sql_automated_checker.question.click_save_question_one
-  @sql_automated_checker.question.fill_in_question_two(@sql_automated_checker.question.test_answer)
-  @sql_automated_checker.question.click_save_question_two
-  @sql_automated_checker.question.fill_in_question_three(@sql_automated_checker.question.test_answer)
-  @sql_automated_checker.question.click_save_question_three
-  @sql_automated_checker.question.fill_in_question_four(@sql_automated_checker.question.test_answer)
-  @sql_automated_checker.question.click_save_question_four
-  @sql_automated_checker.question.fill_in_question_five(@sql_automated_checker.question.test_answer)
-  @sql_automated_checker.question.click_save_question_five
-  @sql_automated_checker.question.fill_in_question_six(@sql_automated_checker.question.test_answer)
-  @sql_automated_checker.question.click_save_question_six
-  @sql_automated_checker.question.fill_in_question_seven(@sql_automated_checker.question.test_answer)
-  @sql_automated_checker.question.click_save_question_seven
-  @sql_automated_checker.question.fill_in_question_eight(@sql_automated_checker.question.test_answer)
-  @sql_automated_checker.question.click_save_question_eight
+  @sql_automated_checker.question.fill_in_question(1, @sql_automated_checker.question.test_answer)
+  @sql_automated_checker.question.click_save_question(1)
+  @sql_automated_checker.question.fill_in_question(2, @sql_automated_checker.question.test_answer)
+  @sql_automated_checker.question.click_save_question(2)
+  @sql_automated_checker.question.fill_in_question(3, @sql_automated_checker.question.test_answer)
+  @sql_automated_checker.question.click_save_question(3)
+  @sql_automated_checker.question.fill_in_question(4, @sql_automated_checker.question.test_answer)
+  @sql_automated_checker.question.click_save_question(4)
+  @sql_automated_checker.question.fill_in_question(5, @sql_automated_checker.question.test_answer)
+  @sql_automated_checker.question.click_save_question(5)
+  @sql_automated_checker.question.fill_in_question(6, @sql_automated_checker.question.test_answer)
+  @sql_automated_checker.question.click_save_question(6)
+  @sql_automated_checker.question.fill_in_question(7, @sql_automated_checker.question.test_answer)
+  @sql_automated_checker.question.click_save_question(7)
+  @sql_automated_checker.question.fill_in_question(8, @sql_automated_checker.question.test_answer)
+  @sql_automated_checker.question.click_save_question(8)
+  
 end
 
 When("I re-log") do
@@ -133,12 +134,13 @@ When("I re-log") do
 end
 
 Then("I should be able to see saved answers in each field") do
-  expect(@sql_automated_checker.question.find_question_one_field_text).to eq(@sql_automated_checker.question.test_answer)
-  expect(@sql_automated_checker.question.find_question_two_field_text).to eq(@sql_automated_checker.question.test_answer)
-  expect(@sql_automated_checker.question.find_question_three_field_text).to eq(@sql_automated_checker.question.test_answer)
-  expect(@sql_automated_checker.question.find_question_four_field_text).to eq(@sql_automated_checker.question.test_answer)
-  expect(@sql_automated_checker.question.find_question_five_field_text).to eq(@sql_automated_checker.question.test_answer)
-  expect(@sql_automated_checker.question.find_question_six_field_text).to eq(@sql_automated_checker.question.test_answer)
-  expect(@sql_automated_checker.question.find_question_seven_field_text).to eq(@sql_automated_checker.question.test_answer)
-  expect(@sql_automated_checker.question.find_question_eight_field_text).to eq(@sql_automated_checker.question.test_answer)
+  expect(p @sql_automated_checker.question.find_question_field_text(1)).to eq(@sql_automated_checker.question.test_answer)
+  expect(@sql_automated_checker.question.find_question_field_text(2)).to eq(@sql_automated_checker.question.test_answer)
+  expect(@sql_automated_checker.question.find_question_field_text(3)).to eq(@sql_automated_checker.question.test_answer)
+  expect(@sql_automated_checker.question.find_question_field_text(4)).to eq(@sql_automated_checker.question.test_answer)
+  expect(@sql_automated_checker.question.find_question_field_text(5)).to eq(@sql_automated_checker.question.test_answer)
+  expect(@sql_automated_checker.question.find_question_field_text(6)).to eq(@sql_automated_checker.question.test_answer)
+  expect(@sql_automated_checker.question.find_question_field_text(7)).to eq(@sql_automated_checker.question.test_answer)
+  expect(@sql_automated_checker.question.find_question_field_text(8)).to eq(@sql_automated_checker.question.test_answer)
+  
 end

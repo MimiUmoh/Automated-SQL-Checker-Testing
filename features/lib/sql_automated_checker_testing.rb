@@ -29,4 +29,5 @@ class SqlAutomatedCheckerTesting
   def db_connection
     Database.new
   end
+  
 end
