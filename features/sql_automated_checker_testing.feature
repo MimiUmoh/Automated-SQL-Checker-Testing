@@ -76,3 +76,11 @@ Feature: Sql Automated Checker
     When I answer six questions right
     Then I should see Pass on my score page
     And thirty marks
+
+  @test
+  Scenario: Student fails the test
+    Given I am logged in
+    And I am on the questions page
+    When I all questions wrong
+    Then I should see Fail on my score page
+    And zero marks
