@@ -65,7 +65,6 @@ Feature: Sql Automated Checker
     When I am on the score page
     Then I should see the corresponding details for the current student
 
-  # @log_out
   Scenario: Student has completed test
     Given I have completed the test
     When I login
