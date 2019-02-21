@@ -1,19 +1,22 @@
 require 'pg'
 
 class Database
-  
+
   def self.connect
     PG.connect(dbname: "spartaappsql")
   end
 
-  def clear_data
+  def clear_data(id)
     conn = Database.connect
-    sql2 = "DELETE FROM sa studentanswer WHERE sa.studenttestid = 2"
-    sql1 = "DELETE FROM student_test WHERE studentid = 3"
-    sql = "DELETE FROM student WHERE studentid = 3"
+    sql2 = "DELETE FROM studentanswer WHERE studenttestid = (SELECT studenttestid FROM student_test WHERE studentid = #{id})"
+    sql1 = "DELETE FROM student_test WHERE studentid = #{id}"
+    sql = "DELETE FROM student WHERE studentid = #{id}"
     conn.exec(sql2)
     conn.exec(sql1)
     conn.exec(sql)
   end
 
 end
+
+test = Database.new
+test.clear_data(3)
