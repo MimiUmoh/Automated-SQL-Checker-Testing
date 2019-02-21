@@ -106,3 +106,15 @@ end
 When("I login") do
   pending # Write code here that turns the phrase above into concrete actions
 end
+
+When("I answer the first six questions right") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then("I should see Pass on my score page") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then("thirty marks") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
