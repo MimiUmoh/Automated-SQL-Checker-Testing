@@ -9,7 +9,7 @@ class Question
   QUESTION_PAGE_INFO_BTN = 'Info'
   LOGOUT_PAGE_BTN = 'Logout'
   QUESTION_PAGE_SUBMIT_BTN = 'Submit'
-  LOG_OUT_BTN_ID = 'Log Out'
+  LOG_OUT_BTN_ID = 'log-out-btn'
 
   def initialize
     @question_header = 'Questions'
