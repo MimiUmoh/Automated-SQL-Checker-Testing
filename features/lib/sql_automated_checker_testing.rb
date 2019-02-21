@@ -26,4 +26,8 @@ class SqlAutomatedCheckerTesting
     StudentLogin.new
   end
   
+  def db_connection
+    Database.new
+  end
+  
 end
