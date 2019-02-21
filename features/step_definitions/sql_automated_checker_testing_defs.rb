@@ -91,12 +91,8 @@ When("I click on the log out button") do
   @sql_automated_checker.question.click_log_out_button
 end
 
-Given("I enter the valid credentials") do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
 Then("I should see the corresponding details for the current student") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(@sql_automated_checker.score.find_student_name).to eq(@name)
 end
 
 Given("I have completed the test") do
@@ -151,7 +147,6 @@ Then("I should be able to see saved answers in each field") do
   expect(@sql_automated_checker.question.find_question_field_text(6)).to eq(@sql_automated_checker.question.test_answer)
   expect(@sql_automated_checker.question.find_question_field_text(7)).to eq(@sql_automated_checker.question.test_answer)
   expect(@sql_automated_checker.question.find_question_field_text(8)).to eq(@sql_automated_checker.question.test_answer)
-  
 end
 
 When("I answer six questions right") do

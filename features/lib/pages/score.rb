@@ -9,6 +9,7 @@ class Score
   SCORE_LOGOUT_BTN = 'Logout'
   SCORE_ID = 'total-score'
   FEEDBACK = 'feedback'
+  STUDENT_NAME_ID = 'student-name'
 
   def initialize
     @score_header = 'Score:'
@@ -22,7 +23,6 @@ class Score
     click_button(SCORE_LOGOUT_BTN)
   end
 
-  
   def check_pass?
     find(:id, FEEDBACK).text
   end
@@ -31,5 +31,8 @@ class Score
     find(:id, SCORE_ID).text.to_i
   end
   
+  def find_student_name
+    find(:id, STUDENT_NAME_ID).text
+  end
 
 end
