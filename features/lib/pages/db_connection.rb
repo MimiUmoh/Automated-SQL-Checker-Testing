@@ -17,6 +17,3 @@ class Database
   end
 
 end
-
-test = Database.new
-test.clear_data(3)
