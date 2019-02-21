@@ -184,3 +184,31 @@ end
 Then("thirty marks") do
   expect(@sql_automated_checker.score.retrieve_result).to eq 30
 end
+
+When("I all questions wrong") do
+  @sql_automated_checker.question.fill_in_question(1, @sql_automated_checker.question.test_answer)
+  @sql_automated_checker.question.click_save_question(1)
+  @sql_automated_checker.question.fill_in_question(2, @sql_automated_checker.question.test_answer)
+  @sql_automated_checker.question.click_save_question(2)
+  @sql_automated_checker.question.fill_in_question(3, @sql_automated_checker.question.test_answer)
+  @sql_automated_checker.question.click_save_question(3)
+  @sql_automated_checker.question.fill_in_question(4, @sql_automated_checker.question.test_answer)
+  @sql_automated_checker.question.click_save_question(4)
+  @sql_automated_checker.question.fill_in_question(5, @sql_automated_checker.question.test_answer)
+  @sql_automated_checker.question.click_save_question(5)
+  @sql_automated_checker.question.fill_in_question(6, @sql_automated_checker.question.test_answer)
+  @sql_automated_checker.question.click_save_question(6)
+  @sql_automated_checker.question.fill_in_question(7, @sql_automated_checker.question.test_answer)
+  @sql_automated_checker.question.click_save_question(7)
+  @sql_automated_checker.question.fill_in_question(8, @sql_automated_checker.question.test_answer)
+  @sql_automated_checker.question.click_save_question(8)
+end
+
+Then("I should see Fail on my score page") do
+  @sql_automated_checker.question.click_question_page_submit_button
+  expect(@sql_automated_checker.score.check_pass?).to eq "FAIL"
+end
+
+Then("zero marks") do
+  expect(@sql_automated_checker.score.retrieve_result).to eq 0
+end
