@@ -82,17 +82,14 @@ Then("I should be directed to the score page") do
 end
 
 Given("I am on the score page") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @sql_automated_checker.question.click_question_page_submit_button
+  expect(@sql_automated_checker.score.find_score_page).to eq(@sql_automated_checker.score.score_header)
 end
 When("I click on the log out button") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @sql_automated_checker.score.click_logout_button
 end
 
 Given("I enter the valid credentials") do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-When("I am on the score page") do
   pending # Write code here that turns the phrase above into concrete actions
 end
 
