@@ -69,3 +69,10 @@ Feature: Sql Automated Checker
     Given I have completed the test
     When I login
     Then I should be directed to the score page
+
+  Scenario: Student passed the test
+    Given I am logged in
+    And I am on the questions page
+    When I answer six questions right
+    Then I should see Pass on my score page
+    And thirty marks

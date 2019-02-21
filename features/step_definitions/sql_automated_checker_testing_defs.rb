@@ -148,3 +148,39 @@ Then("I should be able to see saved answers in each field") do
   expect(@sql_automated_checker.question.find_question_field_text(7)).to eq(@sql_automated_checker.question.test_answer)
   expect(@sql_automated_checker.question.find_question_field_text(8)).to eq(@sql_automated_checker.question.test_answer)
 end
+
+When("I answer six questions right") do
+  @sql_automated_checker.question.fill_in_question(1, 'SELECT * FROM Customers
+    WHERE City = "London" OR City = "Paris"')
+  @sql_automated_checker.question.click_save_question(1)
+  @sql_automated_checker.question.fill_in_question(2, 'SELECT QuantityPerUnit FROM Products
+    WHERE QuantityPerUnit LIKE "%bottle%"')
+  @sql_automated_checker.question.click_save_question(2)
+  @sql_automated_checker.question.fill_in_question(3, 'SELECT QuantityPerUnit, s.CompanyName, s.Country FROM Products p
+    INNER JOIN Suppliers s ON p.SupplierID = s.SupplierID
+    WHERE QuantityPerUnit LIKE "%bottle%"')
+  @sql_automated_checker.question.click_save_question(3)
+  @sql_automated_checker.question.fill_in_question(4, 'SELECT c.CategoryName, COUNT(*) AS "Number Of Products"
+  FROM Products p
+  INNER JOIN Categories c ON p.CategoryID = c.CategoryID 
+  GROUP BY c.CategoryName 
+  ORDER by "Number of Products" DESC;')
+  @sql_automated_checker.question.click_save_question(4)
+  @sql_automated_checker.question.fill_in_question(5, 'SELECT TitleOfCourtesy + " "+ FirstName + " " + LastName AS "title and name", City
+    FROM Employees 
+    WHERE Country = "UK"')
+  @sql_automated_checker.question.click_save_question(5)
+  @sql_automated_checker.question.fill_in_question(7, 'SELECT COUNT(*) AS "Orders with over 100 Freight"
+  FROM Orders
+  WHERE Freight > 100 AND (ShipCountry="USA" OR ShipCountry="UK")')
+  @sql_automated_checker.question.click_save_question(7)
+end
+
+Then("I should see Pass on my score page") do
+  @sql_automated_checker.question.click_question_page_submit_button
+  expect(@sql_automated_checker.score.check_pass?).to eq "PASS"
+end
+
+Then("thirty marks") do
+  expect(@sql_automated_checker.score.retrieve_result).to eq 30
+end
